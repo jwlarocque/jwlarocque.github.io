@@ -125,6 +125,7 @@ hr {
 	display: inline;
 	margin-right: 1em;
 	color: rgb(151, 151, 160);
+	user-select: none;
 }
 
 .content div > .horiNav > h2 {
@@ -519,4 +520,11 @@ iframe {
     position:absolute;
     width: calc(100% - 128px);
     height: calc(100% - 104px);
+}
+
+.code {
+	font-family: monospace;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 0.1em;
+	border-radius: 3px;
 }
