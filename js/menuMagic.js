@@ -31,7 +31,7 @@ function initMenu(){
 }
 
 function unshiftPane(event) {
-    window.location = "";
+    window.location = "#home";
     document.querySelector(".carousel").setAttribute("style", "transform: translate(0)");
     pane1button.setAttribute("class", "active");
     pane2button.setAttribute("class", "")
