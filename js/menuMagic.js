@@ -1,25 +1,6 @@
 var pane1button, pane2button;
 
-$('#menu-trigger-label').click(function () {
-    $( "#line" ).delay(400).slideToggle();
-});
-
 function initMenu(){
-    var switches = {
-        "hamburger": "arrow",
-        "arrow": "hamburger",
-    };
-
-    $("#menu-trigger-label").on("click", function (argument) {
-        var $el = $(this).find(".menu-box").find(".menu-icon"),
-        icon = $el.data("icon"),
-        newIcon = switches[icon];
-
-        if (newIcon) {
-            $el.removeClass(icon).addClass(newIcon).data("icon", newIcon);
-        }
-    });
-
     pane1button = document.querySelector("#pane1button")
     pane1button.addEventListener("click", unshiftPane);
     pane2button = document.querySelector("#pane2button")
