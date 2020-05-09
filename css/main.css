@@ -243,7 +243,11 @@ h4 > a {
 	height: 100%;
 	background-color: #eef2f3;
     width: calc(100% - 8em);
-    max-width: 52em;
+    max-width: 56em;
+}
+
+#text > * {
+	max-width: 104em;
 }
 
 .row {
@@ -340,7 +344,8 @@ figure {
 
 #row1 {
     overflow: visible;
-    margin-top: 0;
+	margin-top: 0;
+	max-width: 100%;
 }
 
 #backdrop {
@@ -405,6 +410,7 @@ iframe {
 
 .carousel > .pane {
 	width: 50%;
+	margin-right: 2em;
 }
 
 .menu-box {
