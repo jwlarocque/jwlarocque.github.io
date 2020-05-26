@@ -256,8 +256,13 @@ h4 > a {
     overflow: auto;
 }
 
+.pane #row-dragdrop .img, .pane #row-which .img {
+	border: 5px solid black; box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 .row img {
-    object-fit: cover;
+	object-fit: cover;
 }
 
 .caption p, .caption a {
