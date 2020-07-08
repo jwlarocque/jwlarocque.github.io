@@ -1,7 +1,10 @@
 <script>
     export let title;
+    export let links;
     export let img;
     export let desc;
+
+    $: console.log(links);
 
     let focused = false;
     let hovered = false;
@@ -19,13 +22,28 @@
     :global(.project h3) {
         font-weight: 400;
         margin: 0.5em 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    :global(.project h3 > *) {
+        margin-right: 0.5em;
+    }
+
+    :global(.project .links > *) {
+        margin-right: 0.3em;
+    }
+
+    :global(.project .links img) {
+        height: 1em;
+        object-fit: cover;
     }
 
     .project .img {
         position: relative;
     }
 
-    :global(.project img, .project iframe, .project video) {
+    :global(.project .img img, .project .img iframe, .project .img video) {
         display: block;
         object-fit: cover;
         width: 100%;
@@ -90,7 +108,7 @@
     on:mouseenter={() => {hovered = true;}} 
     on:mouseleave={() => {hovered = false;}}
 >
-    <h3>{@html title}</h3>
+    <h3>{@html title} {#if links}<div class="links">{@html links}</div>{/if}</h3>
     <div class="img">
         {@html img}
         {#if desc}
