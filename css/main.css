@@ -257,12 +257,13 @@ h4 > a {
 }
 
 .pane #row-dragdrop .img, .pane #row-which .img {
-	border: 5px solid black; box-sizing: border-box;
+	border: 5px solid black; 
 	box-sizing: border-box;
 }
 
-.row img {
+.row img, .row video {
 	object-fit: cover;
+	display: block;
 }
 
 .caption p, .caption a {
