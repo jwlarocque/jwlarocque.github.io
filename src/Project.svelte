@@ -10,7 +10,7 @@
 <style>
     main {
         max-width: 32em;
-        min-width: 26em;
+        min-width: 32em;
         width: 50%;
         margin: 0em 2em 2em;
         cursor: pointer;
@@ -43,7 +43,7 @@
         box-sizing: border-box;
         transition: 200ms ease-in-out;
         opacity: 0%;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.75);
         color: #eef2f3;
     }
 
@@ -60,6 +60,28 @@
     .visible {
         opacity: 100%;
     }
+
+    @media (max-width: 40em) {
+		main {
+            max-width: 100%;
+            min-width: 0%;
+            width: 100%;
+        }
+
+        .project .img {
+            overflow-y: scroll;
+        }
+
+        .desc {
+            min-height: 100%;
+            height: auto;
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+	}
 </style>
 
 <main 

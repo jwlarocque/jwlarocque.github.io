@@ -45,9 +45,8 @@
 		}, {
 			title: '<a href="inversesquare.html">Attraction</a>',
 			img: '<iframe src="inversesquarethumb.html" style="border: 0;"></iframe>',
-			desc: `<p>This Javascript doodle was put together during my high school physics class, when I should have been studying.  It's an inverse square vector field with respect to the mouse position.  Faster than it used to be.</p>
-				   <p>(Thanks to Chris for the idea!)</p>
-				   <p><a href="inversesquare.html">Full Size</a></p>`
+			desc: `<p style="pointer-events: none;">This Javascript doodle was put together during my high school physics class, when I should have been studying.  It's an inverse square vector field with respect to the mouse position.  Faster than it used to be.</p>
+				   <p style="pointer-events: none;">(Thanks to Chris for the idea!)</p>`
 		}, {
 			title: '<a href="https://github.com/jwlarocque/Python-Python">Python Python</a>',
 			img: '<img src="img/python-python.png" alt="Screenshot of Python Python">',
@@ -58,7 +57,6 @@
 </script>
 
 <style>
-
 	#horizontal-nav {
 		overflow: visible;
 		margin: 4em 4em 0 4em;
@@ -99,22 +97,35 @@
 		flex-wrap: wrap;
 	}
 
+	@media (max-width: 40em) {
+		#horizontal-nav {
+			margin: 2em 2em 0 2em;
+		}
+
+		#blurb {
+			margin: 2em 2em 0;
+		}
+
+		#project-list {
+			padding: 0;
+		}
+	}
 </style>
 
 <main>
 	<div id="horizontal-nav">
 		<h1 class="current">John LaRocque</h1>
-		<a href="https://github.com/jwlarocque" target="_blank"><h1>Github&#8599;</h1></a>
-		<a href="https://gitlab.com/jwlarocque" target="_blank"><h1>Gitlab&#8599;</h1></a>
+		<a href="https://github.com/jwlarocque" target="_blank"><h1>GitHub&#8599;</h1></a>
+		<a href="https://gitlab.com/jwlarocque" target="_blank"><h1>GitLab&#8599;</h1></a>
 		<a href="https://www.linkedin.com/in/jwlarocque/" target="_blank"><h1>LinkedIn&#8599;</h1></a>
 		<hr/>
 	</div>
 	<div id="blurb">
-		<div class="row row-left" id="intro">
+		<div>
 			<p>Hi, my name is John.  I'm a programmer, rock climber, and ravenous reader.  I've just finished studying computer science at the University of Oklahoma!</p>
 			<p>On this page you can find a few projects I've created or contributed to.</p>
 		</div>
-		<div class="row row-left" id="links">
+		<div>
 			<p>You can contact me via email: <a href="mailto:john@jwlarocque.com">john@jwlarocque.com</a></p>
 		</div>
 	</div>
