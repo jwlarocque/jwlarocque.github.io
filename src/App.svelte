@@ -130,7 +130,7 @@
 	<div id="blurb">
 		<div>
 			<p>Hi, my name is John.  I'm a programmer, rock climber, and ravenous reader.  I've just finished studying computer science at the University of Oklahoma!</p>
-			<p>On this page you can find a few projects I've created or contributed to.</p>
+			<p>On this page you can find a few projects I've contributed to or created.</p>
 		</div>
 		<div>
 			<p>You can contact me via email: <a href="mailto:john@jwlarocque.com">john@jwlarocque.com</a></p>
