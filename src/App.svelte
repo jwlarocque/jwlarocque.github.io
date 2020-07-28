@@ -42,6 +42,7 @@
 		}, {
 			title: 'Other Contributions',
 			img: `<ul>
+					  <li><a href="https://github.com/parker-codes/finite-state-microwave/issues?q=author%3Ajwlarocque">finite-state-microwave</a> (<a href="https://github.com/parker-codes/finite-state-microwave">GitHub</a>)</li>
 					  <li><a href="https://github.com/notartom/ffreszoom/issues?utf8=%E2%9C%93&q=author%3Ajwlarocque">ffreszoom</a> (<a href="https://github.com/notartom/ffreszoom">GitHub</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/ffreszoom/">Firefox extension</a>)</li>
 					  <li><a href="https://github.com/nose-devs/nose2/issues?utf8=%E2%9C%93&q=author%3Ajwlarocque">nose2</a> (<a href="https://github.com/nose-devs/nose2">GitHub</a>)</li>
 				  </ul>`,
