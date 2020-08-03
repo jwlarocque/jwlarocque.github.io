@@ -3,6 +3,7 @@
     export let links;
     export let img;
     export let desc;
+    export let when;
 
     $: console.log(links);
 
@@ -24,6 +25,7 @@
         margin: 0.5em 0;
         display: flex;
         flex-direction: row;
+        width: 100%;
     }
 
     :global(.project h3 > *) {
@@ -37,6 +39,13 @@
     :global(.project .links img) {
         height: 1em;
         object-fit: cover;
+    }
+
+    .when {
+        margin-right: 0;
+        flex-grow: 1;
+        text-align: right;
+        color: rgba(0, 0, 0, 0.4) !important;
     }
 
     .project .img {
@@ -108,7 +117,7 @@
     on:mouseenter={() => {hovered = true;}} 
     on:mouseleave={() => {hovered = false;}}
 >
-    <h3>{@html title} {#if links}<div class="links">{@html links}</div>{/if}</h3>
+    <h3 class="title">{@html title} {#if links}<div class="links">{@html links}</div>{/if}{#if when}<div class="when">{when}</div>{/if}</h3>
     <div class="img">
         {@html img}
         {#if desc}
