@@ -1,0 +1,69 @@
+[
+    {
+        "title": "Earthwalker",
+        "link": "https://gitlab.com/glatteis/earthwalker",
+        "when": "2020",
+        "sort": "2020-06-01",
+        "bg": "<img src='' />",
+        "img": {
+            "src": "img/earthwalker_example.png",
+            "alt": "Earthwalker Example"
+        },
+        "desc": "GeoGuessr clone via StreetView packet manipulation. Golang and Svelte."
+    }, {
+        "title": "Which?",
+        "when": "Spring 2020",
+        "sort": "2020-01-01",
+        "img": {
+            "src": "img/which_2.jpg",
+            "alt": "Which New Question Page"
+        },
+        "desc": "Polls! Postgres, Golang, and Svelte."
+    }, {
+        "title": "Svelte-DragDropList",
+        "link": "https://github.com/jwlarocque/svelte-dragdroplist",
+        "when": "May 2020",
+        "sort": "2020-05-01",
+        "img": {
+            "src": "img/dragdroplist.mp4",
+            "alt": ""
+        },
+        "desc": "Sortable list Svelte component. At the time, quite good."
+    }, {
+        "title": "Hacklahoma",
+        "link": "https://hacklahoma.org/",
+        "when": "2017 - 2019",
+        "sort": "2019-01-01",
+        "img": {
+            "src": "img/hacklahoma19_centered.svg",
+            "alt": "Hacklahoma Logo"
+        },
+        "desc": "The first MLH hackathon in Oklahoma!  I was ACM secretary and built our websites (<a href=\"https://2019.hacklahoma.org/\">2019</a>, <a href=\"https://2018.hacklahoma.org/\">2018</a>)."
+    }, {
+        "title": "Barrage",
+        "link": "https://github.com/draekris/Barrage/",
+        "when": "Spring 2018",
+        "sort": "2018-01-01",
+        "img": {
+            "src": "https://raw.githubusercontent.com/draekris/Barrage/master/examples/barrage-example.png",
+            "alt": "Barrage Screenshot"
+        },
+        "desc": "Minimal Electron audio player."
+    }, {
+        "title": "Inverse Squares",
+        "when": "2015",
+        "sort": "2015-02-01",
+        "html": "<iframe src='inversesquarethumb.html' style='border: 0;'></iframe>",
+        "desc": ""
+    }, {
+        "title": "Python Python",
+        "link": "https://github.com/jwlarocque/Python-Python/",
+        "when": "2015",
+        "sort": "2015-01-01",
+        "img": {
+            "src": "img/python-python.png",
+            "alt": "Screenshot of Python Python"
+        },
+        "desc": "Snake, made with Python."
+    }
+]

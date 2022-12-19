@@ -1,0 +1,9 @@
+<h3>Outline Vectorization</h3>
+<p>
+    I wanted to emphasize the lines in the image by converting them to vectors which the pen plotter could draw directly, rather than using a shading technique intended for plotting photographs. There are lots of existing tools in this area but they weren't well suited to this image, either performing poorly in terms of accuracy or producing geometry too complex to be drawn.
+</p>
+<div class="indented">
+        <p>
+            To isolate the pixels which were part of "ink" lines, I applied a Gaussian blur to the image and took pixels which became significantly lighter. As you can see this also picks up some pixels which are merely part of a dark region adjacent to a lighter one, but I was more interested in cleanliness than accuracy.
+        </p>
+</div>
