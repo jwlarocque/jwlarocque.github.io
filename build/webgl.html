@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0"/>
+    <title>WebGL / John LaRocque</title>
+    <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+    <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+    <link rel="icon" href="images/favicon-196x196.png">
+    <link rel="stylesheet" id="main css" href="css/main.css" type="text/css">
+
+    <style type="text/css">
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        background-color: #000000;
+        margin: 0;
+        overflow: hidden;
+        font-family: 'Futura',sans-serif;
+    }
+
+    #blocker {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+    }
+
+    #overlay {
+        width: 100%;
+        height: 100%;
+        display: box;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+        color: #ffffff;
+        text-align: center;
+        cursor: pointer;
+    }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <script src="js/three.min.js"></script>
+    <script src="js/Controls.js"></script>
+    <!--<script src="js/CameraHelper.js"></script>-->
+    <div id="blocker">
+        <div id="overlay">
+            <span style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;font-size:40px;color:#ee4035;">click</span>
+            <br/>
+            <br/>
+            <p>Built a long time ago.  Works with Firefox? and Chrome???</p>
+            <hr/>
+            <p>WASD/Space and Mouse</p>
+            <script src="js/webgl.js"></script>
+        </div>
+    </div>
+</body>
+</html>

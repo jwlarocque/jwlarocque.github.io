@@ -1,0 +1,10 @@
+<div class="indented">
+    <p>
+        The low resolution of the source image (512x512) and consequent fine- and disjointedness of the its lines made it difficult to apply the existing line vectorization algorithms I tried (e.g. <a href="http://dx.doi.org/10.1109/34.754586">Sparse Pixel Vectorization</a>). 
+    </p>
+    <p>
+        I ended up implementing a simple greedy tracing method which performed okay on this image. It creates a path starting at a random pixel from the previous step and looks for nearby pixels which maximize the proportion of the vector between the current and candidate next pixel which is in the direction of the vector between the previous and current pixel, divided by the distance to the next pixel (so, <span class="code">dot(bc,&nbspab)&nbsp/&nbspdot(bc,&nbspbc)</span>).
+        <br/>
+        This strategy could be made a bit less greedy by searching more than one pixel ahead or by applying some optimization to the traced paths, but it was good enough as-is.
+    </p>
+</div>
