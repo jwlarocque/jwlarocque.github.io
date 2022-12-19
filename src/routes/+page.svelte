@@ -22,4 +22,7 @@
     {/each}
 </div> -->
 
-<h1 style="width: 100%; text-align: center; margin: 4em 0;">Under Construction</h1>
+<div style="width: 100%; text-align: center; margin: 4em 0;">
+    <h1>Under Construction</h1>
+    <p><a href="/card2022">Maybe you were looking for this page about our Christmas card? (click me)</a></p>
+</div>
