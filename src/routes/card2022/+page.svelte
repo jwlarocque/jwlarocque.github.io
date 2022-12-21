@@ -35,11 +35,18 @@
     }
 
     main > div {
-        margin: 4em 0;
+        margin: 4em 0 0 0;
+    }
+
+    main > div:last-child, .last {
+        margin-bottom: 0;
     }
 
     #plotted-card {
+        width: 100%;
         max-width: 26em;
+        height: auto;
+        box-sizing: border-box;
         display: block;
         margin: auto;
         padding: 1em;
@@ -58,7 +65,7 @@
             <br/>
             Also, you can navigate through the sections with the arrow keys.
         </p>
-        <p>
+        <p class="last">
             Also also, if you didn't get one or received yours somewhat after Christmas I apologize - each card took quite a lot of machine time to make and I had fewer than I would've liked.
         </p>
     </div>

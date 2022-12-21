@@ -3,10 +3,12 @@
 
     $: console.log(data);
 
+    let mobile = false;
     let y:number;
     $: handleScroll(y)
     let curr = 0;
-    let desc;
+    let desc:any;
+    let mainRef:any;
     let descRefs:Array<any> = [];
     let slideRef:any;
     let topOffset = 0;
@@ -14,12 +16,23 @@
     let slideHeight = 0;
     // TODO: recompute on page resize
     $: if (descRefs.length > 0) {
-        topOffset = descRefs[0].getBoundingClientRect().top + window.scrollY;
+        if (desc.getBoundingClientRect().top != mainRef.getBoundingClientRect().top) {
+            // wrapped, mobile mode
+            console.log("desc top: %d, timeline top: %d", desc.getBoundingClientRect().top, mainRef.getBoundingClientRect().top);
+            
+            console.log("mobile!!!");
+            
+            mobile = true;
+            topOffset = 0;
+        } else {
+            topOffset = desc.getBoundingClientRect().top + window.scrollY;
+        }
         bottomOffset = descRefs[descRefs.length - 1].offsetHeight;
         console.log("top: %d, bottom: %d", topOffset, bottomOffset);
     }
     $: if (slideRef) {
         slideHeight = slideRef.offsetHeight;
+        console.log(slideHeight)
     }
 
     function handleWindowKeydown(e:KeyboardEvent) {
@@ -36,8 +49,17 @@
     }
 
     function handleScroll(y:number) {
+        let em = 0;
+        if (desc) {
+            em = parseFloat(getComputedStyle(desc).fontSize);
+        }
         for (let i = 0; i < descRefs.length; i++) {
-            if (descRefs[i].getBoundingClientRect().bottom >= topOffset) {
+            if (mobile) {
+                if (descRefs[i].getBoundingClientRect().bottom - slideHeight >= topOffset) {
+                    curr = i;
+                    return;
+                }
+            } else if (descRefs[i].getBoundingClientRect().bottom - 4 * em >= topOffset) {
                 curr = i;
                 return;
             }
@@ -52,7 +74,11 @@
         // curr = clampCurr(to);
         let target = descRefs[clampCurr(to)]
         let em = parseFloat(getComputedStyle(target).fontSize);
-        window.scroll({ top: target.offsetTop, behavior: 'smooth' });
+        if (mobile) {
+            window.scroll({ top: target.offsetTop + slideHeight - 9 * em, behavior: 'smooth' });
+        } else {
+            window.scroll({ top: target.offsetTop - 4 * em, behavior: 'smooth' });
+        }
     }
 
     function setCurr(to:number) {
@@ -69,6 +95,7 @@
         flex-direction: row;
         justify-content: left;
         gap: 1em;
+        flex-wrap: wrap;
     }
 
     img {
@@ -81,7 +108,10 @@
         align-self: flex-start;
         position: sticky;
         top: 11em;
+        box-sizing: content-box;
         max-width: 32em;
+        background-color: var(--bg-light);
+        padding-top: 4em;
     }
 
     #imgContainer {
@@ -122,11 +152,12 @@
     }
 
     #desc {
-        flex: 1 1 auto;
+        flex: 1 1 26em;
         /* max-width: 50%; */
-        /* padding-top: 2em; */
+        padding-top: 4em;
         color: var(--deemph-light);
-        margin-bottom: calc(100vh - 17em);
+        /* margin-bottom: calc(100vh - 17em); */
+        z-index: -1;
     }
 
     #desc > div {
@@ -149,7 +180,7 @@
 
 <svelte:window bind:scrollY={y} on:keydown={handleWindowKeydown}/>
 
-<main>
+<main bind:this={mainRef}>
     <div id="slide" style="top: {topOffset}px;" bind:this={slideRef}>
         <div id="imgContainer">
             {#each data.items as item, index}
@@ -184,7 +215,7 @@
     <div 
         id="desc" 
         bind:this={desc} 
-        style="margin-bottom: {slideHeight - bottomOffset}px;"
+        style="margin-bottom: {mobile ? 0 : slideHeight - bottomOffset}px;"
     >
         {#each data.items as item, index}
             <div 
