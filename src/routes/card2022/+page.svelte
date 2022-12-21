@@ -47,6 +47,8 @@
     }
 </style>
 
+<title>Christmas Card 2022</title>
+
 <Nav current="2022 Christmas Card"></Nav>
 
 <main id="main">
@@ -63,11 +65,11 @@
     <ImageTimeline data={data.card2022Data}></ImageTimeline>
     <div>
         <p>
-            Tremendous thanks to my mom for hand-writing the message on the reverse side of the cards, for providing everyone's address, and for actually posting all these cards.
+            Tremendous thanks to my mom for hand-writing the message on the reverse side of the cards, for providing everyone's address, and for actually posting all of these cards.
         </p>
         <p>
             From the LaRocques, Merry Christmas.
         </p>
-        <img id="plotted-card" src="/img/card2022_plotted.jpg" alt="A photograph of the plotted card."/>
+        <img id="plotted-card" src="img/card2022_plotted.jpg" alt="A photograph of the plotted card."/>
     </div>
 </main>
