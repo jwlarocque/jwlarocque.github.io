@@ -8,11 +8,18 @@
     let curr = 0;
     let desc;
     let descRefs:Array<any> = [];
+    let slideRef:any;
     let topOffset = 0;
+    let bottomOffset = 0;
+    let slideHeight = 0;
+    // TODO: recompute on page resize
     $: if (descRefs.length > 0) {
-        topOffset = descRefs[0].getBoundingClientRect().top + window.scrollY
-        console.log(topOffset);
-        
+        topOffset = descRefs[0].getBoundingClientRect().top + window.scrollY;
+        bottomOffset = descRefs[descRefs.length - 1].offsetHeight;
+        console.log("top: %d, bottom: %d", topOffset, bottomOffset);
+    }
+    $: if (slideRef) {
+        slideHeight = slideRef.offsetHeight;
     }
 
     function handleWindowKeydown(e:KeyboardEvent) {
@@ -23,13 +30,14 @@
         } else if (["ArrowLeft", "ArrowUp", "w", "a", "i", "j"].includes(e.key)) {
             goTo(curr - 1);
         }
-        e.preventDefault();
+        if (["ArrowUp", "ArrowDown"].includes(e.key)) {
+            e.preventDefault();
+        }
     }
 
     function handleScroll(y:number) {
         for (let i = 0; i < descRefs.length; i++) {
-            let em = parseFloat(getComputedStyle(descRefs[i]).fontSize);
-            if (descRefs[i].getBoundingClientRect().bottom >= 11 * em) {
+            if (descRefs[i].getBoundingClientRect().bottom >= topOffset) {
                 curr = i;
                 return;
             }
@@ -69,6 +77,7 @@
     }
 
     #slide {
+        min-width: 40%;
         align-self: flex-start;
         position: sticky;
         top: 11em;
@@ -113,9 +122,9 @@
     }
 
     #desc {
-        max-width: 50%;
+        flex: 1 1 auto;
+        /* max-width: 50%; */
         /* padding-top: 2em; */
-        padding-right: 1em;
         color: var(--deemph-light);
         margin-bottom: calc(100vh - 17em);
     }
@@ -141,7 +150,7 @@
 <svelte:window bind:scrollY={y} on:keydown={handleWindowKeydown}/>
 
 <main>
-    <div id="slide">
+    <div id="slide" style="top: {topOffset}px;" bind:this={slideRef}>
         <div id="imgContainer">
             {#each data.items as item, index}
                 <img
@@ -172,7 +181,11 @@
             <p id="pageNum">{curr + 1} / {data.items.length}</p>
         </div>
     </div>
-    <div id="desc" bind:this={desc}>
+    <div 
+        id="desc" 
+        bind:this={desc} 
+        style="margin-bottom: {slideHeight - bottomOffset}px;"
+    >
         {#each data.items as item, index}
             <div 
                 bind:this={descRefs[index]}
