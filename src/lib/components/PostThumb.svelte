@@ -1,7 +1,11 @@
 <script lang="ts">
-    export let post:any;
-    let focused = false;
-    let hovered = false;
+    interface Props {
+        post: any;
+    }
+
+    let { post }: Props = $props();
+    let focused = $state(false);
+    let hovered = $state(false);
 </script>
 
 <style>
@@ -91,10 +95,10 @@
 
 <div 
     class="project" 
-    on:click={() => {focused = !focused; hovered = focused;}} 
-    on:keydown={() => {focused = !focused; hovered = focused;}} 
-    on:mouseenter={() => {hovered = true;}} 
-    on:mouseleave={() => {hovered = false;}}
+    onclick={() => {focused = !focused; hovered = focused;}} 
+    onkeydown={() => {focused = !focused; hovered = focused;}} 
+    onmouseenter={() => {hovered = true;}} 
+    onmouseleave={() => {hovered = false;}}
 >
     <h3 class="title">{@html post.title}{#if "when" in post}<div class="when">{post.when}</div>{/if}</h3>
     <div class="img">

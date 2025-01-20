@@ -1,34 +1,42 @@
 {
-    "descPath": "card2022/desc/",
-    "imgPath": "card2022/img/",
-    "items": [
-        {
-            "desc": "0_generate.html",
-            "img": "0_generate.png"
-        }, {
-            "desc": "1_outline_mask.html",
-            "img": "1_outline_mask.png"
-        }, {
-            "desc": "2_outline_paths.html",
-            "img": "2_outline_paths.png"
-        }, {
-            "desc": "3_smoothed_paths.html",
-            "img": "3_smoothed_paths.svg"
-        }, {
-            "desc": "4_shading.html",
-            "img": "0_generate.png"
-        }, {
-            "desc": "5_shading_quantize.html",
-            "img": "5_shading_quantize.png"
-        }, {
-            "desc": "6_shading_masks.html",
-            "img": "6_shading_masks.png"
-        }, {
-            "desc": "7_all_hatched.html",
-            "img": "7_all_hatched.svg"
-        }, {
-            "desc": "8_plotting.html",
-            "img": "8_plotting.svg"
-        }
-    ]
+	"descPath": "card2022/desc/",
+	"imgPath": "card2022/img/",
+	"items": [
+		{
+			"desc": "0_generate.html",
+			"img": "0_generate.png"
+		},
+		{
+			"desc": "1_outline_mask.html",
+			"img": "1_outline_mask.png"
+		},
+		{
+			"desc": "2_outline_paths.html",
+			"img": "2_outline_paths.png"
+		},
+		{
+			"desc": "3_smoothed_paths.html",
+			"img": "3_smoothed_paths.svg"
+		},
+		{
+			"desc": "4_shading.html",
+			"img": "0_generate.png"
+		},
+		{
+			"desc": "5_shading_quantize.html",
+			"img": "5_shading_quantize.png"
+		},
+		{
+			"desc": "6_shading_masks.html",
+			"img": "6_shading_masks.png"
+		},
+		{
+			"desc": "7_all_hatched.html",
+			"img": "7_all_hatched.svg"
+		},
+		{
+			"desc": "8_plotting.html",
+			"img": "8_plotting.svg"
+		}
+	]
 }

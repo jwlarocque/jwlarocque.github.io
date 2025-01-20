@@ -1,9 +1,13 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	export let data: PageData;
 
 	import Nav from '$lib/components/Nav.svelte';
 	import ImageTimeline from '$lib/components/ImageTimeline.svelte';
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <title>Christmas Card 2022</title>

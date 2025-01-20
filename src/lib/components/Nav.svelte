@@ -1,6 +1,10 @@
 <script lang="ts">
-    export let current:string;
-    export let externals:Array<[string, string]> = [];
+	interface Props {
+		current: string;
+		externals?: Array<[string, string]>;
+	}
+
+	let { current, externals = [] }: Props = $props();
 </script>
 
 <style>
