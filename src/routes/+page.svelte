@@ -440,7 +440,7 @@
 <style>
 	#content {
 		margin: auto;
-		padding: 0 2em 2em;
+		padding: 0 1em 2em;
 		max-width: 62em;
 	}
 
