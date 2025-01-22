@@ -50,6 +50,11 @@ body {
 	overflow-x: hidden;
 }
 
+::selection {
+    background-color: var(--emph-light);
+    color: white;
+}
+
 p {
     font-family: 'Avenir', sans-serif;
 }
@@ -65,6 +70,22 @@ a:hover {
 
 a:visited {
 	color: black;
+}
+
+.emph {
+    color: var(--emph-light);
+}
+
+.deemph {
+    color: var(--deemph-light);
+}
+
+.deemph a {
+    color: var(--deemph-light);
+}
+
+.deemph a:visited {
+    color: var(--deemph-light);
 }
 
 .code {
