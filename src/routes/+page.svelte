@@ -350,7 +350,7 @@
 			<a href="https://photos.app.goo.gl/REeTZcCMmZKRN3hXA"><video src="img/tree_rgb.mp4" autoplay loop muted></video></a>
 			<div class="caption">
 				<h3><a href="https://photos.app.goo.gl/REeTZcCMmZKRN3hXA">Volumetric Christmas Tree</a><span class="deemph date">Winter 2023</span></h3>
-				<p>If you light your tree with 1,000 addressable WS2812 LEDs and determine their positions, you can display rudimentary holograms! <a href="https://photos.app.goo.gl/REeTZcCMmZKRN3hXA">Here's a longer video of some "fireworks" on Google Photos.</a></p>
+				<p>If you light your tree with 1,000 addressable WS2812 LEDs and map their positions, you can display rudimentary holograms! <a href="https://photos.app.goo.gl/REeTZcCMmZKRN3hXA">Here's a longer video of some "fireworks" on Google Photos.</a></p>
 				<p>Driving the LEDs at a reasonable refresh rate turned out to be nontrivial - <a href="https://iosoft.blog/2020/09/29/raspberry-pi-multi-channel-ws2812/">big thank you to Jeremy Bentham/Lean2 for this ingenious code for the Raspberry Pi's SMI (Secondary Memory Interface)</a> with which I was able to run 10 channels in parallel with the tight timings required.</p>
 				<p>(No source for this one, sorry - it was very hacked together at the last minute and the code is spread all over the place.)</p>
 			</div>
@@ -359,7 +359,7 @@
 			<img src="img/openshifter_cropped.jpg" alt="" />
 			<div class="caption">
 				<h3>Wireless Shifter<span class="deemph date">2023</span></h3>
-				<p>Bicycle shifter and remote built around two NRF52840 microcontrollers. This programmable shifter supports nearly any combination of derailleur and cassette and has been my daily driver for more than a year. <a href="https://cad.onshape.com/documents/3857741e7c2094e713dad897/w/0f0b60aa21610677d2d0f44f/e/3587f30335bf648cf5ccb152?renderMode=0&uiState=67908b28a21cdd7dfb1ef11b">Click for Onshape CAD soup.</a></p>
+				<p>Bicycle shifter and remote built around two NRF52840 microcontrollers. This programmable shifter supports nearly any combination of derailleur and cassette and is in daily use on my road bike. <a href="https://cad.onshape.com/documents/3857741e7c2094e713dad897/w/0f0b60aa21610677d2d0f44f/e/3587f30335bf648cf5ccb152?renderMode=0&uiState=67908b28a21cdd7dfb1ef11b">Click for Onshape CAD soup.</a></p>
 			</div>
 		</div>
 		<!-- <div id="birdthing" class="project">
@@ -373,7 +373,7 @@
 			<a href="card2022.html"><img src="img/card2022_cropped.jpg" alt="A photograph of the plotted card." /></a>
 			<div class="caption">
 				<h3><a href="card2022.html">Christmas Card</a><span class="deemph date">Winter 2022</span></h3>
-				<p>A pen-plotter-based Christmas card to send out to friends and family. <a href="card2022.html">Click through for a page about creating the front of the card.</a></p>
+				<p>A pen-plotter-based Christmas card to send out to friends and family. <a href="card2022.html">Click through for a page about creating the art on the card.</a></p>
 			</div>
 		</div>
 		<div id="pantrytemp" class="project">
@@ -395,7 +395,7 @@
 			<a href="https://github.com/jwlarocque/which" target="_blank" rel="noreferrer"><img src="img/which_2.jpg" alt="Which New Question Page" /></a>
 			<div class="caption">
 				<h3><a href="https://github.com/jwlarocque/which" target="_blank" rel="noreferrer">Which?</a> <span class="deemph date">Spring 2020</span></h3>
-				<p>A simple polling web app with support for approval and ranked-choice voting in additional to regular old fashioned plurality. At one point it was deployed on AWS EC2 and RDS but Amazon's rates are a bit steep. Made with Postgres, Golang, and Svelte.</p>
+				<p>A simple polling web app with support for approval and ranked-choice voting in additional to regular old fashioned plurality. Includes OAuth 2 support with from-scratch sessions. At one point it was deployed on AWS EC2 and RDS but Amazon's rates are a bit steep. Made with Postgres, Golang, and Svelte.</p>
 			</div>
 		</div>
 		<div id="dragdroplist" class="project">
